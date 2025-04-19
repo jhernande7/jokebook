@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!--
+  Name: Jonathan Hernandez-Cardenas
+  Date: 04.18.2025
+  CSC 372-01
+
+  This is the Jokebook assignment where upon launching it will display a random joke from the initial database data provided in assignment pdf. user can populate with more jokes
+-->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokeBook!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Joke Book</h1>
+
+        <div id="random-joke" class="joke-card">
+            <h2>Random Joke</h2>
+            <p id="random-setup"></p>
+            <p id="random-delivery" class="random-delivery"></p>
+            <button id="get-random-joke"> Get Random Joke</button>
+
+        </div>
+
+        <div class="categories-section">
+            <h2>Categories</h2>
+            <div id="categories-list"></div>
+
+            <div class="search-section">
+                <h3>Search by Category</h3>
+                <div class="search-containers">
+                    <input type="text" id="category-search" placeholder="Entery category name">
+                    <button id="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="jokes-section" class="jokes-section hidden">
+            <h2>Jokes in <span id="current-category"></span></h2>
+            <div id="jokes-list"></div>
+        </div>
+
+
+        <div class="add-joke-form">
+            <h2>Add a New Joke</h2>
+            <form id="joke-form">
+                <div class="form-group">
+                    <label for="joke-category"> Category:</label>
+                    <input type="text" id="joke-category" required>
+                </div>
+                <div class="form-group">
+                    <label for="joke-setup"> Setup:</label>
+                    <input type="text" id="joke-setup" required>
+                </div>
+                <div class="form-group">
+                    <label for="joke-delivery"> Delivery:</label>
+                    <input type="text" id="joke-delivery" required>
+                </div>
+                <button type="submit">Add Joke</button>
+            </form>
+            <div id="form-message"></div>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
